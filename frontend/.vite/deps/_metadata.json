@@ -1,41 +1,59 @@
 {
-  "hash": "c8a12cd6",
+  "hash": "16211c65",
   "configHash": "0ba96cc1",
-  "lockfileHash": "8eef01d9",
-  "browserHash": "b8e0de46",
+  "lockfileHash": "887998ab",
+  "browserHash": "5e25da29",
   "optimized": {
+    "leaflet": {
+      "src": "../../node_modules/leaflet/dist/leaflet-src.js",
+      "file": "leaflet.js",
+      "fileHash": "6581a449",
+      "needsInterop": true
+    },
+    "leaflet.heat": {
+      "src": "../../node_modules/leaflet.heat/dist/leaflet-heat.js",
+      "file": "leaflet__heat.js",
+      "fileHash": "ded674fa",
+      "needsInterop": true
+    },
     "react-dom/client": {
       "src": "../../node_modules/react-dom/client.js",
       "file": "react-dom_client.js",
-      "fileHash": "5376210b",
+      "fileHash": "17bcb5b2",
       "needsInterop": true
+    },
+    "react-leaflet": {
+      "src": "../../node_modules/react-leaflet/lib/index.js",
+      "file": "react-leaflet.js",
+      "fileHash": "0dfa54aa",
+      "needsInterop": false
     },
     "react": {
       "src": "../../node_modules/react/index.js",
       "file": "react.js",
-      "fileHash": "63ab75e2",
+      "fileHash": "9d2ec04a",
       "needsInterop": true
     },
     "react/jsx-dev-runtime": {
       "src": "../../node_modules/react/jsx-dev-runtime.js",
       "file": "react_jsx-dev-runtime.js",
-      "fileHash": "a8056e8a",
+      "fileHash": "c668a4fa",
       "needsInterop": true
     },
     "recharts": {
       "src": "../../node_modules/recharts/es6/index.js",
       "file": "recharts.js",
-      "fileHash": "d9134c5d",
+      "fileHash": "495a3f4a",
       "needsInterop": false
     }
   },
   "chunks": {
-    "react-B6BdZLWZ": {
-      "file": "react-B6BdZLWZ.js",
+    "chunk-B-1-B7_t": {
+      "file": "chunk-B-1-B7_t.js",
       "isDynamicEntry": false
     },
-    "react-dom-ChMvxt5E": {
-      "file": "react-dom-ChMvxt5E.js",
+    "react-dom-DdB5XhIJ": {
+      "file": "react-dom-DdB5XhIJ.js",
       "isDynamicEntry": false
     }
   }

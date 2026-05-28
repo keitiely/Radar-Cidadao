@@ -10,8 +10,8 @@ import DataFooter from './DataFooter.jsx';
 
 export default function Frame2Section() {
   return (
-    <section style={{ background: '#f0f0f0', padding: '1.5rem', fontFamily: 'sans-serif' }}>
-      <RegionComparator />
+      <section style={{ background: 'white', padding: '1.5rem', fontFamily: 'sans-serif', marginTop: '2rem' }}>
+        <RegionComparator />
       <div style={{ display: 'grid', gridTemplateColumns: '1fr 1fr', gap: '1rem', marginTop: '1rem' }}>
         <Top5Chart />
         <CategoryPieChart />
