@@ -1,0 +1,228 @@
+/* =============================================================
+   Frame2.module.css
+   Estilos para todos os componentes do Frame 2
+   Usa CSS variables do sistema de design
+   ============================================================= */
+
+/* ── Layout geral da seção ── */
+.frame2Section {
+  width: 100%;
+  background: var(--color-background-tertiary, #f5f4f0);
+  padding: 2rem 1.5rem;
+  box-sizing: border-box;
+}
+
+.innerWrapper {
+  max-width: 960px;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  gap: 1.5rem;
+}
+
+/* ── Títulos de seção ── */
+.sectionTitle {
+  font-size: 15px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin: 0 0 1rem 0;
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.chartTitle {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin: 0 0 1rem 0;
+}
+
+/* ── Comparador de Regiões ── */
+.comparatorWrapper {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 1.25rem;
+}
+
+.comparatorGrid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .comparatorGrid {
+    grid-template-columns: 1fr;
+  }
+}
+
+.regionCard {
+  background: var(--color-background-secondary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-md);
+  padding: 1rem;
+  display: flex;
+  flex-direction: column;
+  gap: 0.75rem;
+}
+
+.regionSelect {
+  width: 100%;
+  padding: 6px 10px;
+  font-size: 14px;
+  border: 0.5px solid var(--color-border-secondary);
+  border-radius: var(--border-radius-md);
+  background: var(--color-background-primary);
+  color: var(--color-text-primary);
+  cursor: pointer;
+}
+
+.regionMetrics {
+  display: flex;
+  gap: 1rem;
+  align-items: flex-start;
+}
+
+.metricBlock {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.metricLabel {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+}
+
+.metricValue {
+  font-size: 22px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  line-height: 1.2;
+}
+
+.metricValueLarge {
+  font-size: 26px;
+  font-weight: 500;
+  line-height: 1.2;
+}
+
+.problemaPrincipal {
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+}
+
+.problemaLabel {
+  font-size: 11px;
+  color: var(--color-text-secondary);
+  text-transform: uppercase;
+  letter-spacing: 0.04em;
+}
+
+.problemaValue {
+  font-size: 14px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+}
+
+/* ── Cards de gráficos ── */
+.chartsRow {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 1rem;
+}
+
+@media (max-width: 600px) {
+  .chartsRow {
+    grid-template-columns: 1fr;
+  }
+}
+
+.chartCard {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-tertiary);
+  border-radius: var(--border-radius-lg);
+  padding: 1.25rem;
+}
+
+/* ── Tooltip customizado ── */
+.tooltip {
+  background: var(--color-background-primary);
+  border: 0.5px solid var(--color-border-secondary);
+  border-radius: var(--border-radius-md);
+  padding: 8px 12px;
+  font-size: 13px;
+  color: var(--color-text-primary);
+  display: flex;
+  flex-direction: column;
+  gap: 2px;
+  box-shadow: 0 2px 8px rgba(0,0,0,0.08);
+}
+
+/* ── Legenda do pie chart ── */
+.legendRow {
+  display: flex;
+  justify-content: center;
+  gap: 1.5rem;
+  margin-top: 0.5rem;
+}
+
+.legendItem {
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.legendDot {
+  width: 12px;
+  height: 12px;
+  border-radius: 50%;
+  flex-shrink: 0;
+}
+
+.legendLabel {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+}
+
+/* ── Footer ── */
+.dataFooter {
+  background: var(--color-background-secondary);
+  border-top: 0.5px solid var(--color-border-tertiary);
+  padding: 1rem 1.5rem;
+}
+
+.footerInner {
+  max-width: 960px;
+  margin: 0 auto;
+}
+
+.footerLine {
+  font-size: 13px;
+  font-weight: 500;
+  color: var(--color-text-primary);
+  margin: 0 0 6px 0;
+}
+
+.footerText {
+  font-size: 12px;
+  color: var(--color-text-secondary);
+  line-height: 1.6;
+  margin: 0 0 6px 0;
+}
+
+.footerMeta {
+  font-size: 11px;
+  color: var(--color-text-tertiary);
+  margin: 0;
+}
+
+/* ── Estado de loading ── */
+.loadingText {
+  font-size: 13px;
+  color: var(--color-text-secondary);
+  padding: 1rem 0;
+  text-align: center;
+}

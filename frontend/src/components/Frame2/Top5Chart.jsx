@@ -38,7 +38,7 @@ export default function Top5Chart() {
       {loading ? (
         <p>Carregando...</p>
       ) : (
-        <ResponsiveContainer width="100%" height={180}>
+        <ResponsiveContainer width="100%" height={300}>
           <BarChart data={dados} layout="vertical" margin={{ top: 4, right: 16, left: 10, bottom: 4 }}>
             <CartesianGrid horizontal={false} strokeDasharray="3 3" />
             <XAxis type="number" tick={{ fontSize: 12 }} axisLine={false} tickLine={false} />
