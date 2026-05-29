@@ -10,12 +10,12 @@ export function HeaderPainel() {
       </div>
       
       <div style={{ display: 'flex', gap: '10px' }}>
-        {/* Botão de PDF da KITKEITY */}
+        
         <button style={{ padding: '8px 16px', backgroundColor: '#fff', border: '1px solid #cbd5e1', borderRadius: '6px', cursor: 'pointer', fontWeight: '500' }}>
           Relatório (PDF)
         </button>
         
-        {/* Chamando a minha função de baixar o CSV */}
+       
         <ExportarCSV />
       </div>
     </div>
