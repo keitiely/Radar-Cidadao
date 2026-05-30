@@ -3,22 +3,24 @@
 // Gráfico Top 5 Regiões — Frame 2
 // Gráfico de barras horizontais com os 5 bairros mais críticos
 // =============================================================
+// Top5Chart.jsx
 import { useState, useEffect } from 'react';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer, Cell } from 'recharts';
 import { fetchTop5Regioes } from '../../services/firebaseService.js';
 
 const BAR_COLOR = '#E24B4A';
 
-export default function Top5Chart() {
+export default function Top5Chart({ problema }) {  // ← recebe a prop
   const [dados, setDados] = useState([]);
   const [loading, setLoading] = useState(true);
 
   useEffect(() => {
-    fetchTop5Regioes().then(data => {
+    setLoading(true);
+    fetchTop5Regioes(problema).then(data => {  // ← passa o problema
       setDados(data.map(d => ({ name: d.bairro, total: d.total })));
       setLoading(false);
     });
-  }, []);
+  }, [problema]);  // ← recarrega quando o problema muda
 
   const CustomTooltip = ({ active, payload }) => {
     if (active && payload && payload.length) {
@@ -44,7 +46,7 @@ export default function Top5Chart() {
             <XAxis type="number" tick={{ fontSize: 12 }} axisLine={false} tickLine={false} />
             <YAxis type="category" dataKey="name" width={120} tick={{ fontSize: 12, fill: '#333' }} axisLine={false} tickLine={false} />
             <Tooltip content={<CustomTooltip />} />
-            <Bar dataKey="total" radius={[0, 4, 4, 0]}barSize={30}>
+            <Bar dataKey="total" radius={[0, 4, 4, 0]} barSize={30}>
               {dados.map((_, index) => (
                 <Cell key={`cell-${index}`} fill={BAR_COLOR} />
               ))}
